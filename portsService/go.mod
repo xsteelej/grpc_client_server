@@ -1,4 +1,4 @@
-module portsService
+module github.com/xsteelej/grpc_client_server/portsService
 
 go 1.15
 

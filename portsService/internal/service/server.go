@@ -2,8 +2,8 @@ package service
 
 import (
 	context "context"
-	"portsService/grpc"
-	"portsService/internal/database"
+	portsDB "github.com/xsteelej/grpc_client_server/grpc"
+	"github.com/xsteelej/grpc_client_server/portsService/internal/database"
 )
 
 type Server struct {
