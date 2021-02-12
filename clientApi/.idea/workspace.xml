@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a47e52a7-8668-4636-bdcc-508d7ebedb23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../awesomeProject/9ecf8426-80db-49af-929c-54c9ac3dd82d-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../awesomeProject/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hello/lib/components/widgetFactory.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../layout_app/images/lake.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../layout_app/lib/components/FavouriteWidget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../layout_app/lib/components/widgetFactory.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lockingExample/cmd/lockingExample/lockingExample.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/cmd/consolidation/consolidator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp/1_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp2/1_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp2/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp3/1_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp3/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../seecommandui/cmd/seecommandui/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../portsService/internal/database/repository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../portsService/internal/service/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../todo/lib/DetailScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../todo/lib/Todo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../video_player/lib/VideoPlayerScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/VideoPlayerScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/WebViewScreen.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1oNqtaD8rUCmT1ZHxZD8nCN6nVo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+</project>

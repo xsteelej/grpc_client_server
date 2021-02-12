@@ -1,0 +1,29 @@
+syntax = "proto3";
+package portsDB;
+option go_package =".;portsDB";
+
+message Port {
+  string id = 1;
+  string city = 2;
+  string province = 3;
+  string country = 4;
+  repeated string alias = 5;
+  repeated string regions = 6;
+  repeated double coordinates = 7[packed=true];
+  string timezone = 8;
+  repeated int32 unlocs = 9[packed=true];
+}
+
+message writeResponse {
+  string id = 1;
+  bool success = 2;
+}
+
+message portRequest {
+  string id = 1;
+}
+
+service PortsDatabase {
+  rpc write(Port) returns (writeResponse) {}
+  rpc read(portRequest) returns (Port) {}
+}

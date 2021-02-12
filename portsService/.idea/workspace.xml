@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1972693-f37a-4940-9558-9b4f60a83689" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../awesomeProject/9ecf8426-80db-49af-929c-54c9ac3dd82d-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../awesomeProject/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hello/lib/components/widgetFactory.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../layout_app/images/lake.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../layout_app/lib/components/FavouriteWidget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../layout_app/lib/components/widgetFactory.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lockingExample/cmd/lockingExample/lockingExample.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/cmd/consolidation/consolidator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp/1_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp2/1_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp2/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp3/1_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp3/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../seecommandui/cmd/seecommandui/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/database/repository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/service/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../todo/lib/DetailScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../todo/lib/Todo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../video_player/lib/VideoPlayerScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/VideoPlayerScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/WebViewScreen.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1oNheqkXVL9Tgt2To7st61jLXam" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="portsService" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="portsService" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="portsService" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cmd/portsService/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$/bin" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="portsService" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="191" y="99" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613133151740">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="191" y="99" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613133151740" />
+    <state width="1120" height="207" key="GridCell.Tab.0.bottom" timestamp="1613140385107">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1120" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584264" />
+    <state width="1120" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111186" />
+    <state width="1120" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613140385107" />
+    <state width="1120" height="207" key="GridCell.Tab.0.center" timestamp="1613140385106">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1120" height="207" key="GridCell.Tab.0.center/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584263" />
+    <state width="1120" height="207" key="GridCell.Tab.0.center/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111186" />
+    <state width="1120" height="207" key="GridCell.Tab.0.center/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613140385106" />
+    <state width="1120" height="207" key="GridCell.Tab.0.left" timestamp="1613140385106">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1120" height="207" key="GridCell.Tab.0.left/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584263" />
+    <state width="1120" height="207" key="GridCell.Tab.0.left/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111185" />
+    <state width="1120" height="207" key="GridCell.Tab.0.left/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613140385106" />
+    <state width="1120" height="207" key="GridCell.Tab.0.right" timestamp="1613140385107">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1120" height="207" key="GridCell.Tab.0.right/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584264" />
+    <state width="1120" height="207" key="GridCell.Tab.0.right/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111186" />
+    <state width="1120" height="207" key="GridCell.Tab.0.right/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613140385107" />
+  </component>
+</project>
