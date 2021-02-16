@@ -2,27 +2,27 @@ package service
 
 import (
 	context "context"
-	portsDB "github.com/xsteelej/grpc_client_server/grpc"
+	grpc "github.com/xsteelej/grpc_client_server/grpc"
 	"github.com/xsteelej/grpc_client_server/portsService/internal/database"
 )
 
 type Server struct {
 	repo database.Repository
-	portsDB.UnimplementedPortsDatabaseServer
+	grpc.UnimplementedPortsDatabaseServer
 }
 
-func (s Server) Write(ctx context.Context, port *portsDB.Port) (*portsDB.WriteResponse, error) {
+func (s Server) Write(ctx context.Context, port *grpc.Port) (*grpc.WriteResponse, error) {
 	success, err := s.repo.Write(ctx,port)
 	if err != nil {
 		return nil, err
 	}
-	return &portsDB.WriteResponse{
+	return &grpc.WriteResponse{
 		Id:      port.Id,
 		Success: success,
 	}, nil
 }
 
-func (s Server) Read(ctx context.Context, request *portsDB.PortRequest) (*portsDB.Port, error) {
+func (s Server) Read(ctx context.Context, request *grpc.PortRequest) (*grpc.Port, error) {
 	return s.repo.Read(ctx, request.Id)
 }
 

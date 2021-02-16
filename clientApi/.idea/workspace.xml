@@ -17,13 +17,26 @@
       <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp3/1_1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../mediaConsolidation/tmp3/2.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../seecommandui/cmd/seecommandui/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../portsService/internal/database/repository.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../portsService/internal/service/server.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../todo/lib/DetailScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../todo/lib/Todo.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player/lib/VideoPlayerScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/VideoPlayerScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/WebViewScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/clientApi/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/clientApi/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/ports/reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/ports/reader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/rest/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/rest/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/rest/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/rest/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/bin/portsService" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/bin/portsService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/cmd/portsService/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/cmd/portsService/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/internal/database/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/internal/database/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/internal/service/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/internal/service/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +45,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.15.5/libexec" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -52,7 +65,20 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="clientApi" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cmd/clientApi/main.go" />
+      <package value="github.com/grpc_client_server/clientApi" />
+      <directory value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$/bin" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -60,5 +86,59 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="349" y="119" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613150174618">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="349" y="119" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613150174618" />
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom" timestamp="1613514634127">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.0.bottom/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311501" />
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1613514634127" />
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1613509382868" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center" timestamp="1613514634126">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.0.center/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311501" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1613514634126" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1613509382867" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left" timestamp="1613514634125">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.0.left/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311500" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1613514634125" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1613509382867" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right" timestamp="1613514634126">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.0.right/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311501" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1613514634126" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1613509382867" />
+    <state width="1042" height="178" key="GridCell.Tab.1.bottom" timestamp="1613153311502">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.1.bottom/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311502" />
+    <state width="1042" height="178" key="GridCell.Tab.1.center" timestamp="1613153311502">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.1.center/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311502" />
+    <state width="1042" height="178" key="GridCell.Tab.1.left" timestamp="1613153311501">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.1.left/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311501" />
+    <state width="1042" height="178" key="GridCell.Tab.1.right" timestamp="1613153311502">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1042" height="178" key="GridCell.Tab.1.right/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153311502" />
+    <state x="386" y="96" key="SettingsEditor" timestamp="1613149027297">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="386" y="96" key="SettingsEditor/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613149027297" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1613514216040">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1613514216040" />
   </component>
 </project>

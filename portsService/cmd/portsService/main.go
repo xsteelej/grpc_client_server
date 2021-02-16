@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/xsteelej/grpc_client_server/grpc"
 	"github.com/xsteelej/grpc_client_server/portsService/internal/service"
 	"google.golang.org/grpc"
 	"log"

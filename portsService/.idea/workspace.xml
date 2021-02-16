@@ -22,12 +22,20 @@
       <change afterPath="$PROJECT_DIR$/../../video_player/lib/VideoPlayerScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/VideoPlayerScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/WebViewScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/cmd/clientApi/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/cmd/clientApi/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/ports/reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/ports/reader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/rest/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/rest/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/rest/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/rest/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/portsService" beforeDir="false" afterPath="$PROJECT_DIR$/bin/portsService" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/portsService/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/portsService/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/database/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/database/repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/service/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,29 +99,33 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="191" y="99" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613133151740" />
-    <state width="1194" height="207" key="GridCell.Tab.0.bottom" timestamp="1613146643904">
+    <state width="1194" height="207" key="GridCell.Tab.0.bottom" timestamp="1613153313193">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1120" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584264" />
     <state width="1120" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111186" />
-    <state width="1194" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613146643904" />
-    <state width="1194" height="207" key="GridCell.Tab.0.center" timestamp="1613146643903">
+    <state width="1194" height="207" key="GridCell.Tab.0.bottom/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153313193" />
+    <state width="1194" height="207" key="GridCell.Tab.0.center" timestamp="1613153313192">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1120" height="207" key="GridCell.Tab.0.center/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584263" />
     <state width="1120" height="207" key="GridCell.Tab.0.center/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111186" />
-    <state width="1194" height="207" key="GridCell.Tab.0.center/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613146643903" />
-    <state width="1194" height="207" key="GridCell.Tab.0.left" timestamp="1613146643902">
+    <state width="1194" height="207" key="GridCell.Tab.0.center/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153313192" />
+    <state width="1194" height="207" key="GridCell.Tab.0.left" timestamp="1613153313192">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1120" height="207" key="GridCell.Tab.0.left/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584263" />
     <state width="1120" height="207" key="GridCell.Tab.0.left/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111185" />
-    <state width="1194" height="207" key="GridCell.Tab.0.left/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613146643902" />
-    <state width="1194" height="207" key="GridCell.Tab.0.right" timestamp="1613146643903">
+    <state width="1194" height="207" key="GridCell.Tab.0.left/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153313192" />
+    <state width="1194" height="207" key="GridCell.Tab.0.right" timestamp="1613153313193">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1120" height="207" key="GridCell.Tab.0.right/-1302.23.1302.890/0.23.1440.877@0.23.1440.877" timestamp="1613137584264" />
     <state width="1120" height="207" key="GridCell.Tab.0.right/-1302.23.1302.891/0.23.1440.877@0.23.1440.877" timestamp="1613134111186" />
-    <state width="1194" height="207" key="GridCell.Tab.0.right/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613146643903" />
+    <state width="1194" height="207" key="GridCell.Tab.0.right/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613153313193" />
+    <state x="406" y="184" width="598" height="518" key="find.popup" timestamp="1613147109132">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="406" y="184" width="598" height="518" key="find.popup/-1302.23.1302.892/0.23.1440.877@0.23.1440.877" timestamp="1613147109132" />
   </component>
 </project>

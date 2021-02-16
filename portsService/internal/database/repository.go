@@ -1,9 +1,9 @@
 package database
 
-import portsDB "portsService/grpc"
+import grpc "github.com/xsteelej/grpc_client_server/grpc"
 import "context"
 
 type Repository interface {
-	Write(ctx context.Context, port *portsDB.Port) (bool, error)
-	Read(ctx context.Context, id string) (*portsDB.Port, error)
+	Write(ctx context.Context, port *grpc.Port) (bool, error)
+	Read(ctx context.Context, id string) (*grpc.Port, error)
 }
