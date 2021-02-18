@@ -37,7 +37,7 @@ GRPC_SERVER_ADDRESS="localhost:9090" SERVER_PORT=":8081" JSON_FILE="./ports.json
 ```
 cd grpc_client_server/clientApi
 
-docker build -r clientApi:latest
+docker build -t clientApi:latest
 
 docker run -p:8081:8081 --network=grpc_client_server_services \
 -e JSON_FILE=/data/ports.json -e GRPC_SERVER_ADDRESS="ports-service:9090" \
