@@ -4,31 +4,7 @@ networks:
   services:
     driver: bridge
 
-# volumes:
-#   json_data:
-
 services:
-  # client-api:
-  #   build:
-  #     context: "./clientApi"
-  #   restart: on-failure
-  #   environment:
-  #     GRPC_SERVER_ADDRESS: "ports-service:9090"
-  #     SERVER_PORT: 8080
-  #     JSON_FILE: "/json_data/ports.json"
-  #   volumes:
-  #     - json_data:./json_data
-
-  #   networks:
-  #     services:
-  #       aliases:
-  #         - client-api
-  #   ports:
-  #     - 8080:8080 # Rest API service
-  #   depends_on:
-  #     - ports-service
-
-
   ports-service:
     build:
       context: "./portsService"
@@ -41,7 +17,7 @@ services:
         aliases:
           - ports-service
     ports:
-      - 9090:9090 # Rest API service
+      - 9090:9090 # gGRPC service
 
 
   
