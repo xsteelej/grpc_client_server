@@ -4,10 +4,15 @@ import (
 	"context"
 	"encoding/json"
 	grpc "github.com/xsteelej/grpc_client_server/grpc"
+	"log"
 )
 
 type Sender struct {
 	Db grpc.PortsDatabaseClient
+}
+
+func NewSender(db grpc.PortsDatabaseClient) *Sender {
+	return &Sender{Db: db}
 }
 
 func (s *Sender) Write(p []byte) (n int, err error) {
@@ -18,7 +23,10 @@ func (s *Sender) Write(p []byte) (n int, err error) {
 	}
 
 	for id, values := range ports {
-		s.Db.Write(context.Background(), portFromMap(id, values.(map[string]interface{})))
+		_, err := s.Db.Write(context.Background(), portFromMap(id, values.(map[string]interface{})))
+		if err != nil {
+			log.Println("Writing " + id + " was unsuccessful: " + err.Error())
+		}
 	}
 
 	return len(p), nil
@@ -90,12 +98,4 @@ func parseFloatArray(interfaces []interface{}) []float64 {
 		floats[i] = value.(float64)
 	}
 	return floats
-}
-
-func parseIntArray(interfaces []interface{}) []int32 {
-	ints := make([]int32, len(interfaces))
-	for i, value := range interfaces {
-		ints[i] = value.(int32)
-	}
-	return ints
 }

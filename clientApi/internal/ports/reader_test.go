@@ -76,7 +76,8 @@ func (m *MockJsonDbClient) Read(ctx context.Context, in *dbgrpc.PortRequest, opt
 func TestReadJsonFile(t *testing.T) {
 	r := strings.NewReader(testJson)
 	dbc := NewMockJsonClient()
-	ctx, _ := context.WithCancel(context.Background())
+	ctx, cancelCtx := context.WithCancel(context.Background())
+	defer cancelCtx()
 	err := ports.ReadJsonFile(ctx, r, &ports.Sender{dbc})
 	if err != nil {
 		t.Fatal("Error reading json file " + err.Error())

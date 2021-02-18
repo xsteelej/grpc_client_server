@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	mux "github.com/gorilla/mux"
 	grpc "github.com/xsteelej/grpc_client_server/grpc"
+	"log"
 	"net/http"
 )
 
@@ -33,16 +34,26 @@ func (s *Server) handleGetPort() http.HandlerFunc {
 		port, err := s.db.Read(ctx, &grpc.PortRequest{Id: id})
 		if err != nil {
 			w.WriteHeader(http.StatusNotFound)
-			w.Write([]byte(id + " Not found!"))
+			_, err := w.Write([]byte(id + " Not found!"))
+			if err != nil {
+				log.Println("Error writing to http.ResponseWriter")
+			}
 			return
 		}
 
 		portBytes, err := json.Marshal(port)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
-			w.Write([]byte("Internal server error"))
+			_, err := w.Write([]byte("Internal server error"))
+			if err != nil {
+				log.Println("Error writing to http.ResponseWriter " + err.Error())
+			}
 			return
 		}
-		w.Write(portBytes)
+
+		_, err = w.Write(portBytes)
+		if err != nil {
+			log.Println("Error writing to http.ResponseWriter " + err.Error())
+		}
 	}
 }

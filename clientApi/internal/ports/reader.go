@@ -3,6 +3,7 @@ package ports
 import (
 	"context"
 	"io"
+	"log"
 	"strings"
 )
 
@@ -29,7 +30,10 @@ func ReadJsonFile(ctx context.Context, r io.Reader, w io.Writer) error {
 		if !complete {
 			continue
 		}
-		w.Write([]byte(currentObject))
+		_, err := w.Write([]byte(currentObject))
+		if err != nil {
+			log.Println("Error writing: " + currentObject)
+		}
 		currentObject = ""
 	}
 
@@ -67,6 +71,4 @@ func contextCancelled(ctx context.Context) bool {
 	default:
 		return false
 	}
-
-	return false
 }

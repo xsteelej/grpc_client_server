@@ -38,12 +38,19 @@ func run() error {
 	dbClient := dbgrpc.NewPortsDatabaseClient(conn)
 
 	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
 	var wg sync.WaitGroup
-	startJsonReader(&wg, ctx, &ports.Sender{dbClient})
+	err = startJsonReader(&wg, ctx, ports.NewSender(dbClient))
+	if err != nil {
+		return err
+	}
 
 	svr := &http.Server{Addr: getEnv(restPortEnvVar, defaultRestPort), Handler: rest.NewServer(dbClient)}
-	startRestServer(svr, &wg)
-	startShutdownListener(ctx, cancel, svr)
+	err = startRestServer(svr, &wg)
+	if err != nil {
+		return err
+	}
+	startShutdownListener(ctx, svr)
 	wg.Wait()
 
 	return nil
@@ -61,8 +68,11 @@ func startJsonReader(wg *sync.WaitGroup, ctx context.Context, writer io.Writer) 
 
 	wg.Add(1)
 	go func() {
-		ports.ReadJsonFile(ctx, input, writer)
-		wg.Done()
+		defer wg.Done()
+		err := ports.ReadJsonFile(ctx, input, writer)
+		if err != nil {
+			log.Println("Error reading json file " + err.Error())
+		}
 	}()
 
 	return nil
@@ -92,13 +102,15 @@ func startRestServer(svr *http.Server, wg *sync.WaitGroup) error {
 	return nil
 }
 
-func startShutdownListener(ctx context.Context, cancel context.CancelFunc, svr *http.Server) {
+func startShutdownListener(ctx context.Context, svr *http.Server) {
 	shutdownChan := make(chan os.Signal, 1)
 	signal.Notify(shutdownChan, os.Interrupt)
 	go func() {
 		for range shutdownChan {
-			svr.Shutdown(ctx)
-			cancel()
+			err := svr.Shutdown(context.Background())
+			if err != nil {
+				log.Println("Error shutting down server: " + err.Error())
+			}
 		}
 	}()
 }
