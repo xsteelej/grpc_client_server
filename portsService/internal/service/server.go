@@ -11,7 +11,7 @@ type Server struct {
 	grpc.UnimplementedPortsDatabaseServer
 }
 
-func (s Server) Write(ctx context.Context, port *grpc.Port) (*grpc.WriteResponse, error) {
+func (s *Server) Write(ctx context.Context, port *grpc.Port) (*grpc.WriteResponse, error) {
 	success, err := s.repo.Write(ctx,port)
 	if err != nil {
 		return nil, err
@@ -22,7 +22,7 @@ func (s Server) Write(ctx context.Context, port *grpc.Port) (*grpc.WriteResponse
 	}, nil
 }
 
-func (s Server) Read(ctx context.Context, request *grpc.PortRequest) (*grpc.Port, error) {
+func (s *Server) Read(ctx context.Context, request *grpc.PortRequest) (*grpc.Port, error) {
 	return s.repo.Read(ctx, request.Id)
 }
 

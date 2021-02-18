@@ -13,12 +13,21 @@ import (
 	"sync"
 )
 
-const GrpcPortEnvVar = "GRPC_PORT"
+const grpcPortEnvVar = "GRPC_PORT"
 const defaultGrpcPort = ":9090"
-const RestPortEnvVar = "SERVER_PORT"
+const restPortEnvVar = "SERVER_PORT"
 const defaultRestPort = ":8081"
+const jsonFileLocationEnvVar = "JSON_FILE"
 
 func main() {
+	err := run()
+	if err != nil {
+		log.Println(err.Error())
+		os.Exit(1)
+	}
+}
+
+func run() error {
 	conn := grpcClient()
 	defer conn.Close()
 
@@ -26,27 +35,40 @@ func main() {
 	dbClient := dbgrpc.NewPortsDatabaseClient(conn)
 
 	var wg sync.WaitGroup
-	startJsonReader(wg, ctx, dbClient)
+	startJsonReader(&wg, ctx, dbClient)
 
 	svr := &http.Server{
-		Addr:    getEnv(RestPortEnvVar, defaultRestPort),
+		Addr:    getEnv(restPortEnvVar, defaultRestPort),
 		Handler: rest.NewServer(dbClient),
 	}
 	startRestServer(svr, &wg)
 	startShutdownListener(ctx, cancel, svr)
 	wg.Wait()
+
+	return nil
 }
 
-func startJsonReader(wg sync.WaitGroup, ctx context.Context, dbClient dbgrpc.PortsDatabaseClient) {
+func startJsonReader(wg *sync.WaitGroup, ctx context.Context, dbClient dbgrpc.PortsDatabaseClient) error {
+	filename := getEnv(jsonFileLocationEnvVar, "")
+	if len(filename) == 0 {
+		return nil
+	}
+	input, err := os.Open(filename)
+	if err != nil {
+		return err
+	}
+
 	wg.Add(1)
 	go func() {
-		ports.ReadJsonFile(ctx, "", dbClient)
+		ports.ReadJsonFile(ctx, input, &ports.Sender{dbClient})
 		wg.Done()
 	}()
+
+	return nil
 }
 
 func grpcClient() *grpc.ClientConn {
-	conn, err := grpc.Dial(getEnv(GrpcPortEnvVar, defaultGrpcPort), grpc.WithInsecure())
+	conn, err := grpc.Dial(getEnv(grpcPortEnvVar, defaultGrpcPort), grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("did not connect: %s", err)
 	}

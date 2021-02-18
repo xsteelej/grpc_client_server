@@ -22,20 +22,18 @@
       <change afterPath="$PROJECT_DIR$/../../video_player/lib/VideoPlayerScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/VideoPlayerScreen.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../video_player_test/lib/WebViewScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientApi/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/cmd/clientApi/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/cmd/clientApi/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/internal/ports/reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/ports/reader.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientApi/internal/rest/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/rest/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientApi/internal/rest/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/rest/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/ports/reader_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/ports/reader_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/ports/sender.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/ports/sender.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grpc/ports.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc/ports.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grpc/ports.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc/ports.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grpc/ports_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc/ports_grpc.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/portsService" beforeDir="false" afterPath="$PROJECT_DIR$/bin/portsService" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/portsService/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/portsService/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/database/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/database/repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/service/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

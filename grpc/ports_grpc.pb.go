@@ -47,7 +47,7 @@ func (c *portsDatabaseClient) Read(ctx context.Context, in *PortRequest, opts ..
 	return out, nil
 }
 
-// PortsDatabaseServer is the service API for PortsDatabase service.
+// PortsDatabaseServer is the server API for PortsDatabase service.
 // All implementations must embed UnimplementedPortsDatabaseServer
 // for forward compatibility
 type PortsDatabaseServer interface {
@@ -129,5 +129,5 @@ var _PortsDatabase_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "service.proto",
+	Metadata: "ports.proto",
 }
