@@ -42,7 +42,7 @@ func run() error {
 	var wg sync.WaitGroup
 	err = startJsonReader(&wg, ctx, ports.NewSender(dbClient))
 	if err != nil {
-		return err
+		log.Println(err.Error())
 	}
 
 	svr := &http.Server{Addr: getEnv(restPortEnvVar, defaultRestPort), Handler: rest.NewServer(dbClient)}
