@@ -6,6 +6,7 @@ import (
 	"github.com/grpc_client_server/clientApi/internal/rest"
 	dbgrpc "github.com/xsteelej/grpc_client_server/grpc"
 	"google.golang.org/grpc"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -13,8 +14,8 @@ import (
 	"sync"
 )
 
-const grpcPortEnvVar = "GRPC_PORT"
-const defaultGrpcPort = ":9090"
+const grpcServerAddressEnvVar = "GRPC_SERVER_ADDRESS"
+const defaultServerAddress = "localhost:9090"
 const restPortEnvVar = "SERVER_PORT"
 const defaultRestPort = ":8081"
 const jsonFileLocationEnvVar = "JSON_FILE"
@@ -28,19 +29,19 @@ func main() {
 }
 
 func run() error {
-	conn := grpcClient()
+	conn, err := grpcClient()
+	if err != nil {
+		return err
+	}
 	defer conn.Close()
 
-	ctx, cancel := context.WithCancel(context.Background())
 	dbClient := dbgrpc.NewPortsDatabaseClient(conn)
 
+	ctx, cancel := context.WithCancel(context.Background())
 	var wg sync.WaitGroup
-	startJsonReader(&wg, ctx, dbClient)
+	startJsonReader(&wg, ctx, &ports.Sender{dbClient})
 
-	svr := &http.Server{
-		Addr:    getEnv(restPortEnvVar, defaultRestPort),
-		Handler: rest.NewServer(dbClient),
-	}
+	svr := &http.Server{Addr: getEnv(restPortEnvVar, defaultRestPort), Handler: rest.NewServer(dbClient)}
 	startRestServer(svr, &wg)
 	startShutdownListener(ctx, cancel, svr)
 	wg.Wait()
@@ -48,7 +49,7 @@ func run() error {
 	return nil
 }
 
-func startJsonReader(wg *sync.WaitGroup, ctx context.Context, dbClient dbgrpc.PortsDatabaseClient) error {
+func startJsonReader(wg *sync.WaitGroup, ctx context.Context, writer io.Writer) error {
 	filename := getEnv(jsonFileLocationEnvVar, "")
 	if len(filename) == 0 {
 		return nil
@@ -60,19 +61,22 @@ func startJsonReader(wg *sync.WaitGroup, ctx context.Context, dbClient dbgrpc.Po
 
 	wg.Add(1)
 	go func() {
-		ports.ReadJsonFile(ctx, input, &ports.Sender{dbClient})
+		ports.ReadJsonFile(ctx, input, writer)
 		wg.Done()
 	}()
 
 	return nil
 }
 
-func grpcClient() *grpc.ClientConn {
-	conn, err := grpc.Dial(getEnv(grpcPortEnvVar, defaultGrpcPort), grpc.WithInsecure())
+func grpcClient() (*grpc.ClientConn, error) {
+	port := getEnv(grpcServerAddressEnvVar, defaultServerAddress)
+	log.Println("Connecting to grpcClient " + port)
+	conn, err := grpc.Dial(port, grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
-		log.Fatalf("did not connect: %s", err)
+		return nil, err
 	}
-	return conn
+	log.Println("Connected")
+	return conn, nil
 }
 
 func startRestServer(svr *http.Server, wg *sync.WaitGroup) error {

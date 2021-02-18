@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/xsteelej/grpc_client_server/grpc"
+	"github.com/xsteelej/grpc_client_server/portsService/internal/database"
 	"github.com/xsteelej/grpc_client_server/portsService/internal/service"
 	"google.golang.org/grpc"
 	"log"
@@ -11,11 +12,12 @@ import (
 	"sync"
 )
 
-const PortNumberEnvVar = "PORTS_SERVICE_ADDRESS"
+const grpcPortEnvVar = "GRPC_PORT"
+const defaultGrpcPort = ":9090"
 
 func main() {
 	var wg sync.WaitGroup
-	err := startGrpcServer(&wg, getEnv(PortNumberEnvVar,":9090"))
+	err := startGrpcServer(&wg, getEnv(grpcPortEnvVar,defaultGrpcPort))
 	if err != nil {
 		log.Printf("Error: %s", err.Error())
 		os.Exit(1)
@@ -27,8 +29,7 @@ func startGrpcServer(wg *sync.WaitGroup, port string) error {
 	wg.Add(1)
 	go func() {
 		svr := grpc.NewServer()
-		s := service.Server{}
-		portsDB.RegisterPortsDatabaseServer(svr,&s)
+		portsDB.RegisterPortsDatabaseServer(svr,service.NewServiceService(database.NewMemMap()))
 		lis, _ := net.Listen("tcp",port)
 		log.Printf("Ports Service gRPC listening on port: %s\n",port)
 		startShutdownListener(wg, svr)

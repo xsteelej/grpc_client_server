@@ -4,5 +4,7 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-
 bin/**/*
+
+ports.json
+clientApi/bin/clientApi

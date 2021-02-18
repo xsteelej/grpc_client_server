@@ -18,22 +18,62 @@ func (s *Sender) Write(p []byte) (n int, err error) {
 	}
 
 	for id, values := range ports {
-		var portMap = values.(map[string]interface{})
-		port := &grpc.Port{
-			Id:          id,
-			City:        portMap["city"].(string),
-			Province:    portMap["province"].(string),
-			Country:     portMap["country"].(string),
-			Alias:       parseStringArray(portMap["alias"].([]interface{})),
-			Regions:     parseStringArray(portMap["regions"].([]interface{})),
-			Coordinates: parseFloatArray(portMap["coordinates"].([]interface{})),
-			Timezone:    portMap["timezone"].(string),
-			Unlocs:      parseStringArray(portMap["unlocs"].([]interface{})),
-		}
-		s.Db.Write(context.Background(), port, nil)
+		s.Db.Write(context.Background(), portFromMap(id, values.(map[string]interface{})))
 	}
 
 	return len(p), nil
+}
+
+func portFromMap(id string, m map[string]interface{}) *grpc.Port {
+	name, city, province, country, timezone := "", "", "", "", ""
+	coordinates := make([]float64, 0)
+	alias, regions, unlocs := make([]string, 0), make([]string, 0), make([]string, 0)
+
+	if _, ok := m["name"]; ok {
+		name = m["name"].(string)
+	}
+
+	if _, ok := m["city"]; ok {
+		city = m["city"].(string)
+	}
+
+	if _, ok := m["province"]; ok {
+		province = m["province"].(string)
+	}
+
+	if _, ok := m["country"]; ok {
+		country = m["country"].(string)
+	}
+
+	if _, ok := m["alias"]; ok {
+		alias = parseStringArray(m["alias"].([]interface{}))
+	}
+
+	if _, ok := m["regions"]; ok {
+		regions = parseStringArray(m["regions"].([]interface{}))
+	}
+	if _, ok := m["coordinates"]; ok {
+		coordinates = parseFloatArray(m["coordinates"].([]interface{}))
+	}
+	if _, ok := m["timezone"]; ok {
+		timezone = m["timezone"].(string)
+	}
+	if _, ok := m["unlocs"]; ok {
+		unlocs = parseStringArray(m["unlocs"].([]interface{}))
+	}
+	return &grpc.Port{
+		Id:          id,
+		Name:        name,
+		City:        city,
+		Province:    province,
+		Country:     country,
+		Alias:       alias,
+		Regions:     regions,
+		Coordinates: coordinates,
+		Timezone:    timezone,
+		Unlocs:      unlocs,
+	}
+
 }
 
 func parseStringArray(interfaces []interface{}) []string {

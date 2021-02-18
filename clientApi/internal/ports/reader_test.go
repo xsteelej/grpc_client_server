@@ -10,41 +10,44 @@ import (
 	"testing"
 )
 
-const testJson = `{
-"1": {
-"name": "Test Port 1",
-"city": "Test City 1",
-"country": "Test Country 1",
-"alias": [],
-"regions": [],
-"coordinates": [
-55.5136433,
-25.4052165
-],
-"province": "Test Province",
-"timezone": "Test/zone",
-"unlocs": [
-"1"
-],
-"code": "52000"
-},
-"2": {
-"name": "Test Name 2",
-"coordinates": [
-54.37,
-24.47
-],
-"city": "Test City 2",
-"province": "Test Province 2",
-"country": "Test Country 2",
-"alias": [],
-"regions": [],
-"timezone": "Test/Zone2",
-"unlocs": [
-"2"
-],
-"code": "52001"
-}}`
+const testJson = `
+{
+  "1": {
+    "name": "Test Port 1",
+    "city": "Test City 1",
+    "country": "Test Country 1",
+    "alias": [],
+    "regions": [],
+    "coordinates": [
+      55.5136433,
+      25.4052165
+    ],
+    "province": "Test Province",
+    "timezone": "Test/zone",
+    "unlocs": [
+      "1"
+    ],
+    "code": "52000"
+  },
+  "2": {
+    "name": "Test Name 2",
+    "coordinates": [
+      54.37,
+      24.47
+    ],
+    "city": "Test City 2",
+    "province": "Test Province 2",
+    "country": "Test Country 2",
+    "alias": [],
+    "regions": [],
+    "timezone": "Test/Zone2",
+    "unlocs": [
+      "2"
+    ],
+    "code": "52001"
+  }
+}
+`
 
 type MockJsonDbClient struct {
 	Ports map[string]*dbgrpc.Port
@@ -90,17 +93,21 @@ func TestReadJsonFile(t *testing.T) {
 		t.Fatal("Could not find port ID " + "2")
 	}
 
-	aeauhPort := dbc.Ports["2"]
+	testPort2 := dbc.Ports["2"]
 
-	if aeauhPort.City != "Test City 2" {
+	if testPort2.Name != "Test Name 2" {
+		t.Fatal("Name not Test Name 2")
+	}
+
+	if testPort2.City != "Test City 2" {
 		t.Fatal("City not Test City 2")
 	}
 
-	if aeauhPort.Coordinates[0] != 54.37 {
+	if testPort2.Coordinates[0] != 54.37 {
 		t.Fatal("Coordinate incorrect")
 	}
 
-	if aeauhPort.Coordinates[1] != 24.47 {
+	if testPort2.Coordinates[1] != 24.47 {
 		t.Fatal("Coordinate incorrect")
 	}
 }

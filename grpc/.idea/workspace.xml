@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="67a9b60d-d3bb-45d8-8ffe-fc2f51d95f6e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../clientApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/cmd/clientApi/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/cmd/clientApi/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientApi/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/ports/reader_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/ports/reader_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientApi/internal/ports/sender.go" beforeDir="false" afterPath="$PROJECT_DIR$/../clientApi/internal/ports/sender.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../portsService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/bin/portsService" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/bin/portsService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../portsService/cmd/portsService/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../portsService/cmd/portsService/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
