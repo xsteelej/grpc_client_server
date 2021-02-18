@@ -98,3 +98,5 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. \
 * Write some tests in clientApi for the REST interface using ``httptest.NewRecorder()``.
 
 * A panic occurs when the portsService attempts to bind to a port already in use. This should be handled more gracefully.
+
+* Use a NoSQL document store such as MongoDB to persist the data. 
