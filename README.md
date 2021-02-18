@@ -67,7 +67,7 @@ go build -o portsService main.go
 GRPC_PORT=":9090" ./portsService
 ```
 
-**Example running from docker-compose **
+**Example running from docker-compose**
 
 ```
 cd grpc_client_server
