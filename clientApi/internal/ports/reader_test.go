@@ -11,37 +11,37 @@ import (
 )
 
 const testJson = `{
-"AEAJM": {
-"name": "Ajman",
-"city": "Ajman",
-"country": "United Arab Emirates",
+"1": {
+"name": "Test Port 1",
+"city": "Test City 1",
+"country": "Test Country 1",
 "alias": [],
 "regions": [],
 "coordinates": [
 55.5136433,
 25.4052165
 ],
-"province": "Ajman",
-"timezone": "Asia/Dubai",
+"province": "Test Province",
+"timezone": "Test/zone",
 "unlocs": [
-"AEAJM"
+"1"
 ],
 "code": "52000"
 },
-"AEAUH": {
-"name": "Abu Dhabi",
+"2": {
+"name": "Test Name 2",
 "coordinates": [
 54.37,
 24.47
 ],
-"city": "Abu Dhabi",
-"province": "Abu Z¸aby [Abu Dhabi]",
-"country": "United Arab Emirates",
+"city": "Test City 2",
+"province": "Test Province 2",
+"country": "Test Country 2",
 "alias": [],
 "regions": [],
-"timezone": "Asia/Dubai",
+"timezone": "Test/Zone2",
 "unlocs": [
-"AEAUH"
+"2"
 ],
 "code": "52001"
 }}`
@@ -80,5 +80,27 @@ func TestReadJsonFile(t *testing.T) {
 	}
 	if len(dbc.Ports) != 2 {
 		t.Fatal("Error unexpected number of ports")
+	}
+
+	if _, found := dbc.Ports["1"]; !found {
+		t.Fatal("Could not find port ID " + "1")
+	}
+
+	if _, found := dbc.Ports["2"]; !found {
+		t.Fatal("Could not find port ID " + "2")
+	}
+
+	aeauhPort := dbc.Ports["2"]
+
+	if aeauhPort.City != "Test City 2" {
+		t.Fatal("City not Test City 2")
+	}
+
+	if aeauhPort.Coordinates[0] != 54.37 {
+		t.Fatal("Coordinate incorrect")
+	}
+
+	if aeauhPort.Coordinates[1] != 24.47 {
+		t.Fatal("Coordinate incorrect")
 	}
 }

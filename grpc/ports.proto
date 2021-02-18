@@ -12,6 +12,7 @@ message Port {
   repeated double coordinates = 7[packed=true];
   string timezone = 8;
   repeated string unlocs = 9;
+  string name = 10;
 }
 
 message writeResponse {

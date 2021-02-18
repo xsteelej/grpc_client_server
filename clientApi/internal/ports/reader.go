@@ -19,7 +19,7 @@ func ReadJsonFile(ctx context.Context, r io.Reader, w io.Writer) error {
 			return err
 		}
 
-		currentObject += strings.TrimSpace(string(buf))
+		currentObject += strings.Trim(string(buf), "\n\t")
 		objectLevel = calculateObjectLevel(buf, objectLevel, currentObject)
 		if string(buf) != "}" {
 			continue
@@ -30,6 +30,7 @@ func ReadJsonFile(ctx context.Context, r io.Reader, w io.Writer) error {
 			continue
 		}
 		w.Write([]byte(currentObject))
+		currentObject = ""
 	}
 
 	return nil
