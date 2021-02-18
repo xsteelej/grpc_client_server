@@ -96,3 +96,5 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. \
 * The json parsing in clientApi parses each character byte by byte. This was chosen over ``json.Decoder`` because Decoder tokenises each element and it was more complex to reconstruct a valid json string per object. By parsing each byte at a time, it was easier to preserve the original json format of each object and stream from the large file. It is likely that a more efficient algorithm could be used in the future using ``json.Decoder``.
 
 * Write some tests in clientApi for the REST interface using ``httptest.NewRecorder()``.
+
+* A panic occurs when the portsService attempts to bind to a port already in use. This should be handled more gracefully.
