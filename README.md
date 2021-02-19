@@ -8,7 +8,7 @@ The project consists of three modules:
 ### clientApi
 
 This service is responsible for parsing the json file and sending the objects to the portsService using gRPC.
-It also provides a REST endpoint to read data fromn the portsService.
+It also provides a REST endpoint to read data from the portsService.
 
 #### _Testing_
 
