@@ -52,11 +52,11 @@ Responsible for serving storing / retrieving ports objects. This service starts 
 
 ``go test -v -coverprofile cover.out ./...``
 
-The client can be run from the cli or within docker.
+The service can be run from the cli or within docker.
 
 #### _Running_
 
-The server can be run from the cli or by using docker-compose.
+The service can be run from the cli or by using docker-compose.
 
 **Example running from the CLI**
 ```
